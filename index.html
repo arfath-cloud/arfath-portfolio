@@ -1,0 +1,2360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05030A">
+
+<meta name="description" content="Arfath I - Senior Snowflake Data Engineer specializing in Snowflake, SQL, AWS, cloud data engineering and emerging AI technologies.">
+
+<title>Arfath I | Senior Data Engineer & AI Professional</title>
+
+<!-- Premium Poppins Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================
+   01. GLOBAL DESIGN SYSTEM
+===================================== */
+
+:root {
+  --background: #05030A;
+  --background-secondary: #10071E;
+  --background-card: #160D25;
+
+  --purple: #974BFA;
+  --violet: #BD82FF;
+  --pink: #E77BCF;
+
+  --white: #FFFFFF;
+  --text: #F8F5FF;
+  --muted: #B8AFC8;
+
+  --border: rgba(193,123,255,.17);
+
+  --gradient: linear-gradient(
+    110deg,
+    #974BFA,
+    #C66CDE,
+    #E77BCF
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 5% 5%,
+      rgba(76,28,111,.28),
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 95% 40%,
+      rgba(69,21,103,.20),
+      transparent 38%
+    ),
+    #05030A;
+
+  color: var(--text);
+
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1320px, 88%);
+  margin: auto;
+}
+
+.gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section {
+  padding: 115px 0;
+}
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--violet);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(34px, 3.5vw, 50px);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.section-description {
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 14px;
+  max-width: 720px;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+/* =====================================
+   02. AMBIENT BACKGROUND
+===================================== */
+
+.background-glow {
+  position: fixed;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  filter: blur(150px);
+  pointer-events: none;
+  z-index: -2;
+  opacity: .12;
+}
+
+.glow-one {
+  background: #A03BFF;
+  top: -250px;
+  left: -200px;
+}
+
+.glow-two {
+  background: #E14BBF;
+  bottom: -250px;
+  right: -200px;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .35;
+}
+
+/* =====================================
+   03. NAVIGATION
+===================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(5,3,10,.86);
+
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+nav {
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #D0C5DD;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--pink);
+}
+
+.nav-contact {
+  padding: 10px 20px;
+  border: 1px solid rgba(219,171,255,.5);
+  border-radius: 8px;
+}
+
+.menu-btn {
+  display: none;
+  color: white;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* =====================================
+   04. HERO SECTION
+===================================== */
+
+.hero-wrapper {
+  padding-top: 115px;
+  padding-bottom: 50px;
+}
+
+.hero {
+  min-height: 690px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  padding: 75px 7%;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(193,123,255,.12);
+
+  background:
+    radial-gradient(
+      ellipse at 80% 75%,
+      rgba(126,44,165,.27),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 10% 0%,
+      rgba(84,37,126,.30),
+      transparent 48%
+    ),
+    linear-gradient(
+      110deg,
+      #10071E,
+      #05030A 80%
+    );
+
+  box-shadow: 0 25px 100px rgba(0,0,0,.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 16px;
+
+  border-radius: 30px;
+
+  border: 1px solid var(--border);
+
+  background: rgba(100,53,130,.15);
+
+  color: #D9C1F7;
+
+  font-size: 11px;
+  letter-spacing: 1.2px;
+
+  margin-bottom: 28px;
+}
+
+.status-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #69E7A6;
+  box-shadow: 0 0 12px #69E7A6;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 5.5vw, 84px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -3px;
+  color: white;
+}
+
+.hero-role {
+  margin-top: 19px;
+  font-size: clamp(19px, 2vw, 26px);
+  color: #E3D6EF;
+  font-weight: 500;
+}
+
+.hero-description {
+  margin-top: 24px;
+  max-width: 610px;
+  font-size: 15px;
+  line-height: 2;
+  color: #C3B7D1;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 23px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.button-primary {
+  color: white;
+  background: linear-gradient(
+    110deg,
+    #8244D8,
+    #D75EC4
+  );
+
+  box-shadow: 0 5px 30px rgba(164,76,227,.27);
+}
+
+.button-secondary {
+  color: white;
+  border: 1px solid rgba(230,200,255,.5);
+  background: rgba(255,255,255,.025);
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(164,76,227,.3);
+}
+
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-top: 37px;
+  color: #AFA2C2;
+  font-size: 12px;
+}
+
+/* =====================================
+   05. INTERACTIVE AI ORB
+===================================== */
+
+.orb-container {
+  height: 510px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.orb-container::before {
+  content: "";
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: #A03BFF;
+
+  filter: blur(120px);
+
+  opacity: .3;
+
+  animation: orbGlow 5s infinite alternate;
+}
+
+#orb {
+  width: 100%;
+  height: 490px;
+  max-width: 530px;
+  position: relative;
+  z-index: 2;
+  cursor: crosshair;
+}
+
+.orb-caption {
+  position: absolute;
+  bottom: 8px;
+
+  color: #BDA8D5;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  z-index: 3;
+}
+
+@keyframes orbGlow {
+  from {
+    transform: scale(.8);
+    opacity: .16;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: .35;
+  }
+}
+
+/* =====================================
+   06. ABOUT SECTION
+===================================== */
+
+.about-panel {
+  padding: 42px;
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(40,20,60,.7),
+      rgba(12,6,20,.95)
+    );
+
+  border: 1px solid var(--border);
+}
+
+.about-description {
+  max-width: 1000px;
+  color: #C0B4CE;
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.stat-card {
+  background: rgba(135,72,190,.09);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #C89BFF;
+  line-height: 1.3;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+/* =====================================
+   07. SKILLS SECTION
+===================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+}
+
+.skill-card {
+  padding: 30px;
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(38,20,57,.8),
+      rgba(12,7,20,.96)
+    );
+
+  border: 1px solid var(--border);
+
+  transition: .35s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(218,130,255,.55);
+  box-shadow: 0 15px 45px rgba(111,42,156,.15);
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 21px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 9px 13px;
+
+  font-size: 12px;
+  color: #E2D2F1;
+
+  border-radius: 7px;
+
+  border: 1px solid rgba(193,123,255,.19);
+
+  background: rgba(143,81,190,.12);
+
+  transition: .25s;
+}
+
+.skill:hover {
+  background: rgba(150,80,220,.3);
+  border-color: #C17BFF;
+  transform: translateY(-3px);
+}
+
+.learning-panel {
+  margin-top: 22px;
+  padding: 20px 24px;
+
+  background: rgba(155,83,220,.08);
+  border-left: 3px solid var(--violet);
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  color: #C6B5D8;
+}
+
+/* =====================================
+   08. EXPERIENCE TIMELINE
+===================================== */
+
+.timeline {
+  max-width: 920px;
+  margin-left: 10px;
+  border-left: 2px solid rgba(172,104,222,.5);
+}
+
+.timeline-item {
+  padding: 0 0 48px 35px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+
+  left: -8px;
+  top: 8px;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: #D28CFF;
+
+  box-shadow: 0 0 18px #B66CFF;
+}
+
+.timeline-item h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.company-name {
+  color: #D19AFF;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.job-date {
+  font-size: 12px;
+  color: #9A8BAA;
+  margin: 8px 0 15px;
+}
+
+.job-details {
+  padding-left: 19px;
+  color: #BEB1CA;
+  font-size: 13px;
+}
+
+.job-details li {
+  padding-bottom: 7px;
+}
+
+/* =====================================
+   09. ACHIEVEMENTS
+===================================== */
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.achievement-card {
+  padding: 30px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(49,22,70,.8),
+    rgba(12,6,20,.95)
+  );
+
+  border: 1px solid var(--border);
+
+  transition: .3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink);
+}
+
+.achievement-value {
+  font-size: 39px;
+  font-weight: 700;
+  color: #D09CFF;
+}
+
+.achievement-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* =====================================
+   10. PROJECT SHOWCASE
+===================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+}
+
+.project-card {
+  padding: 32px;
+  min-height: 260px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(38,20,57,.8),
+      rgba(10,5,18,.97)
+    );
+
+  border: 1px solid var(--border);
+
+  transition: .35s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(217,131,255,.6);
+  box-shadow: 0 20px 45px rgba(116,45,161,.15);
+}
+
+.project-index {
+  color: #C38BFF;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.project-card h3 {
+  margin-top: 17px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: #B8AFC8;
+  font-size: 13px;
+  margin-top: 12px;
+  line-height: 1.9;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.project-tags span {
+  padding: 5px 10px;
+  background: rgba(144,81,195,.14);
+  border: 1px solid rgba(193,123,255,.15);
+  border-radius: 5px;
+  font-size: 10px;
+  color: #DDC7F2;
+}
+
+.project-status {
+  display: inline-block;
+  margin-top: 19px;
+  color: #E4B8FF;
+  border: 1px solid #B36CDB;
+  border-radius: 20px;
+  padding: 5px 11px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* =====================================
+   11. EDUCATION
+===================================== */
+
+.education-card {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(38,20,57,.8),
+    rgba(10,5,18,.95)
+  );
+}
+
+.education-card h3 {
+  font-size: 20px;
+}
+
+.education-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* =====================================
+   12. CONTACT
+===================================== */
+
+.contact-panel {
+  text-align: center;
+
+  padding: 65px 30px;
+
+  border: 1px solid var(--border);
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(112,44,157,.42),
+      transparent 65%
+    ),
+    #10071E;
+}
+
+.contact-panel h2 {
+  font-size: clamp(32px,4.5vw,53px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contact-panel p {
+  color: #BDB1CB;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.contact-links a {
+  border: 1px solid rgba(213,169,255,.35);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #E0C6FA;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.contact-links a:hover {
+  background: rgba(160,83,213,.25);
+  transform: translateY(-3px);
+}
+
+/* =====================================
+   13. FOOTER
+===================================== */
+
+footer {
+  padding: 35px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: #8D819A;
+  font-size: 12px;
+}
+
+/* =====================================
+   14. ANIMATIONS
+===================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floating {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* =====================================
+   15. LARGE MONITOR RESPONSIVENESS
+===================================== */
+
+@media(min-width:1600px) {
+  .container {
+    width: min(1420px,88%);
+  }
+
+  .hero {
+    min-height: 760px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .hero h1 {
+    font-size: 90px;
+  }
+
+  .section-title {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+/* =====================================
+   16. TABLET RESPONSIVENESS
+===================================== */
+
+@media(max-width:1000px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 65px 6%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-description {
+    max-width: 680px;
+  }
+
+  .hero-details,
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .orb-container {
+    height: 450px;
+  }
+
+  #orb {
+    height: 440px;
+  }
+}
+
+/* =====================================
+   17. MOBILE RESPONSIVENESS
+===================================== */
+
+@media(max-width:700px) {
+
+  .container {
+    width: 91%;
+  }
+
+  nav {
+    height: 72px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: #0B0612;
+
+    padding: 25px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero-wrapper {
+    padding-top: 95px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 65px 6% 35px;
+    border-radius: 17px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px,11vw,62px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .orb-container {
+    height: 340px;
+  }
+
+  #orb {
+    height: 340px;
+  }
+
+  .stats-grid,
+  .skills-grid,
+  .achievement-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .about-panel {
+    padding: 25px;
+  }
+
+  .project-card,
+  .skill-card {
+    padding: 24px;
+  }
+
+  .contact-panel {
+    padding: 45px 20px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+<canvas id="particles"></canvas>
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<header>
+<nav class="container">
+
+  <a href="#home" class="logo">
+    ARFATH<span>.</span>
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Expertise</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact" class="nav-contact">Let's Connect</a>
+  </div>
+
+  <button class="menu-btn" id="menuBtn"
+    aria-label="Toggle navigation"
+    aria-expanded="false">
+    ☰
+  </button>
+
+</nav>
+</header>
+
+<main>
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<div class="hero-wrapper container">
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="hero-status">
+      <span class="status-dot"></span>
+      DATA ENGINEERING & AI TECHNOLOGY
+    </div>
+
+    <h1>
+      Hi, I'm<br>
+      <span class="gradient">Arfath I.</span>
+    </h1>
+
+    <h2 class="hero-role">
+      Senior Snowflake Data Engineer
+    </h2>
+
+    <p class="hero-description">
+      Engineering scalable data platforms, building
+      intelligent data pipelines and exploring the
+      future of artificial intelligence.
+
+      Bringing 7.5 years of IT experience across
+      enterprise data engineering, Snowflake,
+      SQL and cloud technologies.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#experience" class="button button-primary">
+        Explore My Journey ↗
+      </a>
+
+      <a href="Arfath_CV.pdf"
+         class="button button-secondary"
+         download>
+        Download Resume ↓
+      </a>
+
+    </div>
+
+    <div class="hero-details">
+      <span>⌖ Chennai, India</span>
+      <span>✦ Snowflake Specialist</span>
+      <span>✦ Cloud Data Engineering</span>
+    </div>
+
+  </div>
+
+  <div class="orb-container">
+
+    <canvas id="orb"
+      aria-label="Interactive animated AI orb">
+    </canvas>
+
+    <div class="orb-caption">
+      INTERACTIVE INTELLIGENCE CORE
+    </div>
+
+  </div>
+
+</section>
+</div>
+
+<!-- =====================================
+     ABOUT
+===================================== -->
+
+<section class="section" id="about">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      01 / ABOUT ME
+    </div>
+
+    <h2 class="section-title">
+      Engineering Data.<br>
+      <span class="gradient">Creating Possibilities.</span>
+    </h2>
+
+    <p class="section-description">
+      My professional journey, technical background
+      and engineering approach.
+    </p>
+
+  </div>
+
+  <div class="about-panel">
+
+    <p class="about-description">
+      I am a Data Engineering professional with 7.5 years
+      of overall IT experience, including production
+      experience in Snowflake development, SQL,
+      AWS-based data processing and Oracle PL/SQL.
+
+      <br><br>
+
+      Experienced in developing Snowflake data pipelines,
+      stored procedures, automated ingestion workflows,
+      SQL transformations, warehouse optimization,
+      dimensional modelling and production support.
+
+      <br><br>
+
+      I am continuously developing my skills in Python,
+      dbt, modern cloud platforms and Generative AI
+      for data engineering.
+    </p>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div class="stat-number">7.5+</div>
+        <div class="stat-label">
+          Years Overall IT Experience
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">
+          Organizations in Career History
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">
+          Records Processed Daily at Capgemini
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     SKILLS
+===================================== -->
+
+<section class="section" id="skills">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      02 / TECHNOLOGY STACK
+    </div>
+
+    <h2 class="section-title">
+      My Technical <span class="gradient">Universe.</span>
+    </h2>
+
+    <p class="section-description">
+      Technologies and engineering capabilities
+      developed through professional experience
+      and structured technical learning.
+    </p>
+
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>❖ Snowflake & Database Development</h3>
+
+      <div class="skill-list">
+        <span class="skill">Snowflake</span>
+        <span class="skill">Snowpipe</span>
+        <span class="skill">Streams</span>
+        <span class="skill">Tasks</span>
+        <span class="skill">Dynamic Tables</span>
+        <span class="skill">Time Travel</span>
+        <span class="skill">Zero-Copy Cloning</span>
+        <span class="skill">RBAC</span>
+        <span class="skill">Oracle PL/SQL</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Stored Procedures</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>☁ AWS & Data Engineering</h3>
+
+      <div class="skill-list">
+        <span class="skill">Amazon S3</span>
+        <span class="skill">AWS Glue</span>
+        <span class="skill">AWS Data Pipeline</span>
+        <span class="skill">ETL / ELT</span>
+        <span class="skill">Data Ingestion</span>
+        <span class="skill">Data Transformation</span>
+        <span class="skill">Data Warehousing</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>◈ Data Modelling & Formats</h3>
+
+      <div class="skill-list">
+        <span class="skill">Dimensional Modelling</span>
+        <span class="skill">Star Schema</span>
+        <span class="skill">Fact Tables</span>
+        <span class="skill">Dimension Tables</span>
+        <span class="skill">JSON</span>
+        <span class="skill">Parquet</span>
+        <span class="skill">CSV</span>
+        <span class="skill">XML</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>✧ Engineering Practices</h3>
+
+      <div class="skill-list">
+        <span class="skill">Git</span>
+        <span class="skill">CI/CD Fundamentals</span>
+        <span class="skill">Agile</span>
+        <span class="skill">Jira</span>
+        <span class="skill">Production Support</span>
+        <span class="skill">Root Cause Analysis</span>
+        <span class="skill">Monitoring & Alerting</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="learning-panel">
+    <strong>Currently Developing:</strong>
+
+    Python fundamentals, dbt fundamentals,
+    Apache Airflow, Databricks, PySpark,
+    Azure Data Factory, ADLS Gen2,
+    Azure Databricks, Synapse Analytics,
+    LLMs, RAG, embeddings, vector databases
+    and AI agents.
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     EXPERIENCE
+===================================== -->
+
+<section class="section" id="experience">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      03 / CAREER JOURNEY
+    </div>
+
+    <h2 class="section-title">
+      Professional <span class="gradient">Experience.</span>
+    </h2>
+
+    <p class="section-description">
+      My career progression across data engineering
+      and software development.
+    </p>
+
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <h3>Senior Snowflake Data Engineer</h3>
+
+      <div class="company-name">
+        Tata Consultancy Services (TCS) · Chennai
+      </div>
+
+      <div class="job-date">
+        6 July 2026 – Present
+      </div>
+
+      <ul class="job-details">
+        <li>
+          Develop parameterized Snowflake stored procedures
+          to process semi-structured data into relational tables.
+        </li>
+
+        <li>
+          Build and schedule automated hourly Snowflake
+          data-processing workflows.
+        </li>
+
+        <li>
+          Create reusable functions and procedures
+          for data ingestion and transformation.
+        </li>
+
+        <li>
+          Configure Snowflake stages and file formats
+          for semi-structured data ingestion.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>Senior Snowflake Data Engineer</h3>
+
+      <div class="company-name">
+        Capgemini · Bengaluru
+      </div>
+
+      <div class="job-date">
+        15 October 2025 – 6 March 2026
+      </div>
+
+      <ul class="job-details">
+        <li>
+          Processed more than one million records per day
+          through Snowflake data pipelines.
+        </li>
+
+        <li>
+          Improved query performance by approximately
+          20–30% through SQL and workload optimization.
+        </li>
+
+        <li>
+          Reduced manual ingestion effort by approximately
+          40% through Snowpipe automation.
+        </li>
+
+        <li>
+          Enhanced pipeline reliability through
+          monitoring and alerting mechanisms.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>Lead Engineer – Data Engineering</h3>
+
+      <div class="company-name">
+        Optisol Business Solution Private Limited · Chennai
+      </div>
+
+      <div class="job-date">
+        9 May 2022 – 7 October 2025
+      </div>
+
+      <ul class="job-details">
+        <li>
+          Designed scalable Snowflake and SQL data pipelines.
+        </li>
+
+        <li>
+          Contributed to Snowflake warehouse design,
+          schema design and performance tuning.
+        </li>
+
+        <li>
+          Created and managed databases, schemas, tables,
+          views, stages, file formats and Snowpipe ingestion.
+        </li>
+
+        <li>
+          Built notification and alerting mechanisms
+          for data anomalies using AWS services.
+        </li>
+
+        <li>
+          Designed analytical datasets using
+          fact and dimension tables.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>Software Developer</h3>
+
+      <div class="company-name">
+        Azentio Software Private Limited · Chennai
+      </div>
+
+      <div class="job-date">
+        18 August 2021 – 6 May 2022
+      </div>
+
+      <ul class="job-details">
+        <li>
+          Designed and developed AWS-based ETL applications.
+        </li>
+
+        <li>
+          Optimized SQL queries and existing workloads.
+        </li>
+
+        <li>
+          Supported database production issues
+          and performed root cause analysis.
+        </li>
+
+        <li>
+          Assisted with data extraction and
+          transformation planning.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>Software Developer</h3>
+
+      <div class="company-name">
+        Redback IT Solution Private Limited · Vellore
+      </div>
+
+      <div class="job-date">
+        2 May 2019 – 30 July 2021
+      </div>
+
+      <ul class="job-details">
+        <li>
+          Monitored and troubleshot application
+          and database issues.
+        </li>
+
+        <li>
+          Performed root cause analysis and implemented fixes.
+        </li>
+
+        <li>
+          Supported patching, version upgrades
+          and data protection activities.
+        </li>
+
+        <li>
+          Assisted with debugging, testing
+          and production support.
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     ACHIEVEMENTS
+===================================== -->
+
+<section class="section">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      04 / CAREER HIGHLIGHTS
+    </div>
+
+    <h2 class="section-title">
+      Impact Through <span class="gradient">Engineering.</span>
+    </h2>
+
+  </div>
+
+  <div class="achievement-grid">
+
+    <div class="achievement-card">
+      <div class="achievement-value">1M+</div>
+      <p>
+        Records processed per day through
+        Snowflake data pipelines at Capgemini.
+      </p>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-value">20–30%</div>
+      <p>
+        Approximate query performance improvement
+        through SQL and workload optimization.
+      </p>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-value">40%</div>
+      <p>
+        Approximate reduction in manual ingestion
+        effort through Snowpipe automation.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     PROJECTS
+===================================== -->
+
+<section class="section" id="projects">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      05 / PROJECT LAB
+    </div>
+
+    <h2 class="section-title">
+      Building the <span class="gradient">Future.</span>
+    </h2>
+
+    <p class="section-description">
+      Proposed hands-on portfolio projects.
+      Each will become a real repository and
+      demonstration as it is developed.
+    </p>
+
+  </div>
+
+  <div class="projects-grid">
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 01 / DATA PLATFORM
+      </div>
+
+      <h3>Enterprise Data Engineering Platform</h3>
+
+      <p>
+        Develop an end-to-end cloud data platform
+        with automated ingestion, transformation,
+        data modelling and analytics-ready datasets.
+      </p>
+
+      <div class="project-tags">
+        <span>Snowflake</span>
+        <span>AWS S3</span>
+        <span>dbt</span>
+        <span>SQL</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 02 / GENERATIVE AI
+      </div>
+
+      <h3>AI-Powered SQL Assistant</h3>
+
+      <p>
+        Create an assistant that converts natural-language
+        questions into SQL queries and helps users
+        explore warehouse data.
+      </p>
+
+      <div class="project-tags">
+        <span>Python</span>
+        <span>LLMs</span>
+        <span>Snowflake</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 03 / ORCHESTRATION
+      </div>
+
+      <h3>Automated Data Pipeline</h3>
+
+      <p>
+        Develop scheduled ETL workflows with orchestration,
+        retries, error handling and pipeline monitoring.
+      </p>
+
+      <div class="project-tags">
+        <span>Apache Airflow</span>
+        <span>Python</span>
+        <span>Snowflake</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 04 / ANALYTICS
+      </div>
+
+      <h3>Enterprise Analytics Dashboard</h3>
+
+      <p>
+        Build a reporting solution with transformed
+        datasets and interactive business performance
+        visualizations.
+      </p>
+
+      <div class="project-tags">
+        <span>Power BI</span>
+        <span>SQL</span>
+        <span>Snowflake</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 05 / DATA QUALITY
+      </div>
+
+      <h3>Automated Data Quality Framework</h3>
+
+      <p>
+        Implement validation rules, anomaly checks,
+        data quality reporting and automated
+        failure notifications.
+      </p>
+
+      <div class="project-tags">
+        <span>Python</span>
+        <span>dbt</span>
+        <span>SQL</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-index">
+        PROJECT 06 / AI KNOWLEDGE
+      </div>
+
+      <h3>Enterprise AI Knowledge Assistant</h3>
+
+      <p>
+        Create a retrieval-augmented assistant
+        to search and retrieve information
+        from enterprise documents.
+      </p>
+
+      <div class="project-tags">
+        <span>Python</span>
+        <span>RAG</span>
+        <span>Embeddings</span>
+        <span>Vector DB</span>
+      </div>
+
+      <span class="project-status">PLANNED PROJECT</span>
+
+    </article>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     EDUCATION
+===================================== -->
+
+<section class="section" id="education">
+
+<div class="container reveal">
+
+  <div class="section-heading">
+
+    <div class="section-label">
+      06 / EDUCATION
+    </div>
+
+    <h2 class="section-title">
+      Academic <span class="gradient">Foundation.</span>
+    </h2>
+
+  </div>
+
+  <div class="education-card">
+
+    <h3>Bachelor of Engineering</h3>
+
+    <p>
+      Kingston Engineering College · Vellore, Tamil Nadu
+    </p>
+
+    <p>
+      August 2012 – May 2016
+    </p>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =====================================
+     CONTACT
+===================================== -->
+
+<section class="section" id="contact">
+
+<div class="container reveal">
+
+  <div class="contact-panel">
+
+    <div class="section-label">
+      07 / LET'S CONNECT
+    </div>
+
+    <h2>
+      Let's Build Something<br>
+      <span class="gradient">Intelligent.</span>
+    </h2>
+
+    <p>
+      Open to connecting with technology professionals
+      and discussing data engineering, cloud platforms
+      and artificial intelligence.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:arfath.cloud@gmail.com">
+        ✉ Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/arfath-i/"
+         target="_blank"
+         rel="noopener">
+        ↗ LinkedIn
+      </a>
+
+      <a href="tel:+919500475013">
+        ☎ Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+</main>
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+<div class="container">
+  © 2026 Arfath I · Senior Data Engineer.
+  Designed with curiosity and technology.
+</div>
+
+</footer>
+
+<!-- =====================================
+     JAVASCRIPT INTERACTIONS
+===================================== -->
+
+<script>
+
+/* =====================================
+   01. INTERACTIVE AI ORB
+===================================== */
+
+(() => {
+
+  const canvas = document.getElementById("orb");
+  const ctx = canvas.getContext("2d");
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const points = [];
+  const count = 850;
+
+  let width = 0;
+  let height = 0;
+  let radius = 0;
+  let rotation = 0;
+  let frame = 0;
+
+  let pointer = {
+    x: 0,
+    y: 0,
+    active: false
+  };
+
+  function resize() {
+
+    const rect = canvas.getBoundingClientRect();
+
+    const dpr = Math.min(
+      window.devicePixelRatio || 1,
+      2
+    );
+
+    width = rect.width;
+    height = rect.height;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+
+    radius = Math.min(width,height) * .34;
+
+  }
+
+  // Create spherical particle positions.
+
+  for(let i=0;i<count;i++) {
+
+    const y = 1 - (i/(count-1))*2;
+
+    const ring = Math.sqrt(1-y*y);
+
+    const angle = Math.PI *
+      (3-Math.sqrt(5))*i;
+
+    points.push({
+      x: Math.cos(angle)*ring,
+      y: y,
+      z: Math.sin(angle)*ring,
+      seed: Math.random()*Math.PI*2
+    });
+
+  }
+
+  function draw() {
+
+    if(!width) return;
+
+    ctx.clearRect(0,0,width,height);
+
+    const cx = width/2;
+    const cy = height/2;
+
+    rotation += reducedMotion ? 0 : .003;
+    frame += .016;
+
+    const tiltX = pointer.active
+      ? pointer.y*.25
+      : Math.sin(frame*.4)*.12;
+
+    const tiltY = pointer.active
+      ? pointer.x*.25
+      : Math.cos(frame*.3)*.17;
+
+    // Main purple glow.
+
+    const glow = ctx.createRadialGradient(
+      cx,cy,5,
+      cx,cy,radius*1.6
+    );
+
+    glow.addColorStop(0,"rgba(139,67,255,.28)");
+    glow.addColorStop(.45,"rgba(191,89,255,.12)");
+    glow.addColorStop(1,"rgba(0,0,0,0)");
+
+    ctx.fillStyle = glow;
+
+    ctx.beginPath();
+    ctx.arc(cx,cy,radius*1.6,0,Math.PI*2);
+    ctx.fill();
+
+    // Rotate and project sphere particles.
+
+    const projected = points.map(p => {
+
+      const a = rotation+tiltY;
+
+      const rx =
+        p.x*Math.cos(a)-p.z*Math.sin(a);
+
+      const rz =
+        p.x*Math.sin(a)+p.z*Math.cos(a);
+
+      const ry =
+        p.y*Math.cos(tiltX)-rz*Math.sin(tiltX);
+
+      const rz2 =
+        p.y*Math.sin(tiltX)+rz*Math.cos(tiltX);
+
+      const scale = 3.1/(3.1-rz2*.6);
+
+      return {
+        x:cx+rx*radius*scale,
+        y:cy+ry*radius*scale,
+        z:rz2,
+        size:Math.max(.45,1.4+rz2*1.2),
+        alpha:.22+(rz2+1)*.34
+      };
+
+    });
+
+    // Neural network connections.
+
+    ctx.lineWidth = .6;
+
+    for(let i=0;i<projected.length;i+=3) {
+
+      for(
+        let j=i+3;
+        j<Math.min(i+15,projected.length);
+        j+=3
+      ) {
+
+        const a = projected[i];
+        const b = projected[j];
+
+        const dx = a.x-b.x;
+        const dy = a.y-b.y;
+
+        const distance = dx*dx+dy*dy;
+
+        if(
+          distance < radius*radius*.085 &&
+          a.z > -.3 &&
+          b.z > -.3
+        ) {
+
+          ctx.strokeStyle =
+            `rgba(211,144,255,${
+              .15*(1-distance/(radius*radius*.085))
+            })`;
+
+          ctx.beginPath();
+          ctx.moveTo(a.x,a.y);
+          ctx.lineTo(b.x,b.y);
+          ctx.stroke();
+
+        }
+
+      }
+
+    }
+
+    // Draw glowing particles.
+
+    projected.sort((a,b)=>a.z-b.z);
+
+    projected.forEach((p,i)=>{
+
+      const pulse =
+        .65+.35*Math.sin(frame*2+i*.06);
+
+      ctx.fillStyle =
+        `rgba(204,151,255,${p.alpha*pulse})`;
+
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+      ctx.fill();
+
+    });
+
+    // Horizontal orbital ring.
+
+    ctx.save();
+
+    ctx.translate(cx,cy);
+    ctx.rotate(rotation*.45);
+    ctx.scale(1,.32);
+
+    ctx.strokeStyle = "rgba(221,148,255,.45)";
+    ctx.lineWidth = 1;
+
+    ctx.beginPath();
+    ctx.arc(0,0,radius*1.3,0,Math.PI*2);
+    ctx.stroke();
+
+    ctx.restore();
+
+    // Vertical orbital ring.
+
+    ctx.save();
+
+    ctx.translate(cx,cy);
+    ctx.rotate(-rotation*.7);
+    ctx.scale(.34,1);
+
+    ctx.strokeStyle = "rgba(204,117,255,.4)";
+
+    ctx.beginPath();
+    ctx.arc(0,0,radius*1.28,0,Math.PI*2);
+    ctx.stroke();
+
+    ctx.restore();
+
+    if(!reducedMotion) {
+      requestAnimationFrame(draw);
+    }
+
+  }
+
+  canvas.addEventListener("pointermove",e=>{
+
+    const rect = canvas.getBoundingClientRect();
+
+    pointer.x =
+      (e.clientX-rect.left-rect.width/2)/
+      (rect.width/2);
+
+    pointer.y =
+      (e.clientY-rect.top-rect.height/2)/
+      (rect.height/2);
+
+    pointer.active = true;
+
+  });
+
+  canvas.addEventListener("pointerleave",()=>{
+    pointer.active = false;
+  });
+
+  window.addEventListener("resize",resize);
+
+  resize();
+  draw();
+
+})();
+
+
+/* =====================================
+   02. BACKGROUND PARTICLE NETWORK
+===================================== */
+
+(() => {
+
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+
+  const particles = [];
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  let width = 0;
+  let height = 0;
+
+  function resize() {
+
+    const dpr = Math.min(
+      window.devicePixelRatio || 1,
+      2
+    );
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = width*dpr;
+    canvas.height = height*dpr;
+
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+
+  }
+
+  for(let i=0;i<65;i++) {
+
+    particles.push({
+
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+
+      vx:(Math.random()-.5)*.22,
+      vy:(Math.random()-.5)*.22,
+
+      r:Math.random()*1.5+.5
+
+    });
+
+  }
+
+  function animate() {
+
+    ctx.clearRect(0,0,width,height);
+
+    particles.forEach((p,i)=>{
+
+      if(!reducedMotion) {
+
+        p.x+=p.vx;
+        p.y+=p.vy;
+
+      }
+
+      if(p.x<0||p.x>width) p.vx*=-1;
+      if(p.y<0||p.y>height) p.vy*=-1;
+
+      ctx.fillStyle = "rgba(198,142,255,.7)";
+
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+
+      for(let j=i+1;j<particles.length;j++) {
+
+        const q = particles[j];
+
+        const dx = p.x-q.x;
+        const dy = p.y-q.y;
+
+        const distance = Math.sqrt(dx*dx+dy*dy);
+
+        if(distance<105) {
+
+          ctx.strokeStyle =
+            `rgba(171,110,230,${
+              .13*(1-distance/105)
+            })`;
+
+          ctx.lineWidth = .6;
+
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y);
+          ctx.lineTo(q.x,q.y);
+          ctx.stroke();
+
+        }
+
+      }
+
+    });
+
+    if(!reducedMotion) {
+      requestAnimationFrame(animate);
+    }
+
+  }
+
+  window.addEventListener("resize",resize);
+
+  resize();
+  animate();
+
+})();
+
+
+/* =====================================
+   03. SCROLL REVEAL ANIMATION
+===================================== */
+
+const observer = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold:.12
+  }
+
+);
+
+document.querySelectorAll(".reveal").forEach(element=>{
+  observer.observe(element);
+});
+
+
+/* =====================================
+   04. MOBILE NAVIGATION
+===================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",()=>{
+
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuBtn.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+});
+
+navLinks.querySelectorAll("a").forEach(link=>{
+
+  link.addEventListener("click",()=>{
+
+    navLinks.classList.remove("open");
+
+    menuBtn.setAttribute("aria-expanded","false");
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
