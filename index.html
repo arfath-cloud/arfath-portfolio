@@ -764,6 +764,19 @@ nav {
   color: #DDC7F2;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #D09CFF;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .25s;
+}
+.project-link:hover {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
 .project-status {
   display: inline-block;
   margin-top: 19px;
@@ -1095,6 +1108,7 @@ footer {
     <a href="#skills">Expertise</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="https://github.com/arfath-cloud" target="_blank" rel="noopener">GitHub</a>
     <a href="#contact" class="nav-contact">Let's Connect</a>
   </div>
 
@@ -1147,6 +1161,9 @@ footer {
 
       <a href="#experience" class="button button-primary">
         Explore My Journey ↗
+      </a>
+      <a href="https://github.com/arfath-cloud" class="button button-secondary" target="_blank" rel="noopener">
+        Explore My GitHub ↗
       </a>
 
       <a href="Arfath_CV.pdf"
@@ -1223,9 +1240,9 @@ footer {
 
       <br><br>
 
-      I am continuously developing my skills in Python,
-      dbt, modern cloud platforms and Generative AI
-      for data engineering.
+      I apply Python, dbt, modern cloud data platforms and Generative AI
+      concepts to build practical data engineering solutions, with a focus
+      on scalable pipelines, automation and intelligent data workflows.
     </p>
 
     <div class="stats-grid">
@@ -1350,14 +1367,13 @@ footer {
   </div>
 
   <div class="learning-panel">
-    <strong>Currently Developing:</strong>
+    <strong>Technical Expertise:</strong>
 
-    Python fundamentals, dbt fundamentals,
-    Apache Airflow, Databricks, PySpark,
-    Azure Data Factory, ADLS Gen2,
-    Azure Databricks, Synapse Analytics,
-    LLMs, RAG, embeddings, vector databases
-    and AI agents.
+    Python, dbt, Apache Airflow, Databricks, PySpark,
+    Azure Data Factory, ADLS Gen2, Azure Databricks,
+    Azure Synapse Analytics, Large Language Models (LLMs),
+    Retrieval-Augmented Generation (RAG), embeddings,
+    vector databases and AI agents.
   </div>
 
 </div>
@@ -1646,9 +1662,9 @@ footer {
     </h2>
 
     <p class="section-description">
-      Proposed hands-on portfolio projects.
-      Each will become a real repository and
-      demonstration as it is developed.
+      Four hands-on portfolio repositories covering
+      cloud data engineering, Python ETL and AI.
+      Validation and deployment are being completed in stages.
     </p>
 
   </div>
@@ -1656,158 +1672,42 @@ footer {
   <div class="projects-grid">
 
     <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 01 / DATA PLATFORM
-      </div>
-
-      <h3>Enterprise Data Engineering Platform</h3>
-
-      <p>
-        Develop an end-to-end cloud data platform
-        with automated ingestion, transformation,
-        data modelling and analytics-ready datasets.
-      </p>
-
-      <div class="project-tags">
-        <span>Snowflake</span>
-        <span>AWS S3</span>
-        <span>dbt</span>
-        <span>SQL</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
+      <div class="project-index">PROJECT 01 / SNOWFLAKE DATA ENGINEERING</div>
+      <h3>Enterprise Retail Data Engineering Pipeline</h3>
+      <p>An end-to-end retail data engineering learning project covering CSV ingestion, Snowflake SQL transformations, incremental MERGE patterns, SCD Type 2, Streams, Tasks and data-quality validation.</p>
+      <div class="project-tags"><span>Snowflake</span><span>SQL</span><span>CSV</span><span>SCD Type 2</span></div>
+      <span class="project-status">PUBLISHED ON GITHUB</span>
+      <p><a class="project-link" href="https://github.com/arfath-cloud/snowflake-enterprise-retail-pipeline" target="_blank" rel="noopener">View repository ↗</a></p>
     </article>
 
     <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 02 / GENERATIVE AI
-      </div>
-
-      <h3>AI-Powered SQL Assistant</h3>
-
-      <p>
-        Create an assistant that converts natural-language
-        questions into SQL queries and helps users
-        explore warehouse data.
-      </p>
-
-      <div class="project-tags">
-        <span>Python</span>
-        <span>LLMs</span>
-        <span>Snowflake</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
+      <div class="project-index">PROJECT 02 / PYTHON ENGINEERING</div>
+      <h3>Python Data Engineering Framework</h3>
+      <p>A reusable batch ETL framework demonstrating CSV ingestion, validation, transformation, logging, command-line execution, custom exceptions and automated tests.</p>
+      <div class="project-tags"><span>Python</span><span>ETL</span><span>Pytest</span><span>Logging</span></div>
+      <span class="project-status">PUBLISHED ON GITHUB</span>
+      <p><a class="project-link" href="https://github.com/arfath-cloud/python-data-engineering-framework" target="_blank" rel="noopener">View repository ↗</a></p>
     </article>
 
     <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 03 / ORCHESTRATION
-      </div>
-
-      <h3>Automated Data Pipeline</h3>
-
-      <p>
-        Develop scheduled ETL workflows with orchestration,
-        retries, error handling and pipeline monitoring.
-      </p>
-
-      <div class="project-tags">
-        <span>Apache Airflow</span>
-        <span>Python</span>
-        <span>Snowflake</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
+      <div class="project-index">PROJECT 03 / AWS CLOUD DATA</div>
+      <h3>AWS Serverless Data Lake Pipeline</h3>
+      <p>An educational serverless pipeline using S3 for raw data, Lambda for CSV validation, AWS Glue for transformation, and Athena for analytics.</p>
+      <div class="project-tags"><span>AWS S3</span><span>Lambda</span><span>Glue</span><span>Athena</span></div>
+      <span class="project-status">PUBLISHED ON GITHUB</span>
+      <p><a class="project-link" href="https://github.com/arfath-cloud/aws-serverless-data-lake" target="_blank" rel="noopener">View repository ↗</a></p>
     </article>
 
     <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 04 / ANALYTICS
-      </div>
-
-      <h3>Enterprise Analytics Dashboard</h3>
-
-      <p>
-        Build a reporting solution with transformed
-        datasets and interactive business performance
-        visualizations.
-      </p>
-
-      <div class="project-tags">
-        <span>Power BI</span>
-        <span>SQL</span>
-        <span>Snowflake</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
-    </article>
-
-    <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 05 / DATA QUALITY
-      </div>
-
-      <h3>Automated Data Quality Framework</h3>
-
-      <p>
-        Implement validation rules, anomaly checks,
-        data quality reporting and automated
-        failure notifications.
-      </p>
-
-      <div class="project-tags">
-        <span>Python</span>
-        <span>dbt</span>
-        <span>SQL</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
-    </article>
-
-    <article class="project-card">
-
-      <div class="project-index">
-        PROJECT 06 / AI KNOWLEDGE
-      </div>
-
-      <h3>Enterprise AI Knowledge Assistant</h3>
-
-      <p>
-        Create a retrieval-augmented assistant
-        to search and retrieve information
-        from enterprise documents.
-      </p>
-
-      <div class="project-tags">
-        <span>Python</span>
-        <span>RAG</span>
-        <span>Embeddings</span>
-        <span>Vector DB</span>
-      </div>
-
-      <span class="project-status">PLANNED PROJECT</span>
-
+      <div class="project-index">PROJECT 04 / GENERATIVE AI</div>
+      <h3>AI-Powered Data Engineering Assistant</h3>
+      <p>A command-line assistant designed to explain SQL, review sanitized pipeline errors, and draft starter SQL using an LLM API with human review.</p>
+      <div class="project-tags"><span>Python</span><span>LLM</span><span>SQL</span><span>OpenAI API</span></div>
+      <span class="project-status">PUBLISHED ON GITHUB</span>
+      <p><a class="project-link" href="https://github.com/arfath-cloud/ai-data-engineering-assistant" target="_blank" rel="noopener">View repository ↗</a></p>
     </article>
 
   </div>
-
-</div>
-</section>
-
-<!-- =====================================
-     EDUCATION
-===================================== -->
 
 <section class="section" id="education">
 
@@ -1872,6 +1772,8 @@ footer {
       <a href="mailto:arfath.cloud@gmail.com">
         ✉ Email Me
       </a>
+
+      <a href="https://github.com/arfath-cloud" target="_blank" rel="noopener">↗ GitHub Profile</a>
 
       <a href="https://www.linkedin.com/in/arfath-i/"
          target="_blank"
